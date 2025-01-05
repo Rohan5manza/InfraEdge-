@@ -8,14 +8,13 @@ export default function Header() {
             <div className={styles.logoSection}>
                 <img src="/infraedge.png" alt="Logo" className={styles.logo} />
                 <span className={styles.brandName}>
-                    Infraedge
+                    InfraEdge
                 </span>
             </div>
             <nav className={styles.navbar}>
                 <a href="/">Home</a>
-                <a href="/demo">Demo</a>
-                <a href="/features">Features</a>
-                <a href="/contact">Contact</a>
+                <a href="https://tensorbuilds.netlify.app">TensorBuilds</a>
+                <a href="https://wa.me/qr/LUDMYTACVQGHC1">Contact</a>
 
             </nav>
         </header>

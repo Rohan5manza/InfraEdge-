@@ -14,10 +14,17 @@ export default function SubscriptionPlan() {
             id: 1,
             heading: `What do you get?`,
             cost: 199,
-            perks: [`5 lightweight apps`,
-                `Subdomains per app`, `Infinite CPU time`, `25 GB storage max`, `Server software`
+            perks: [`Launch 5 lightweight apps of your choice`, 'Better alternative to Vercel to host web apps',
+                `Personal URLs per app`, `Infinite CPU time`, `25 GB storage max`
             ],
         },
+        {
+            id: 2,
+            heading: `What do you get?`,
+            cost: 269,
+            perks: [`Launch 5 lightweight apps of your choice`, 'Better alternative to Vercel to host web apps',
+                `Personal URLs per app`, `Infinite CPU time`, `50 GB storage max`, `Access to main Server software. Hands-on infrastructure experience.`, 'Monthly educational resources for Cloud & DevOps ','Deploy & use your own 1 VM / VPS with any OS ( Ubuntu,Windows, Kali Linux,etc).'
+            ],}
     ];
 
     return (
@@ -65,9 +72,10 @@ export default function SubscriptionPlan() {
                         </ul>
                     </div>
                     <div className={styles.packbuttoncontainer}>
-                        <button type="button">
-                            Buy Now
+                        <a href="https://forms.gle/gDFa1BuBpAEnnHq87"><button type="button">
+                           <h3>Get Free Trial now ! </h3>
                         </button>
+                        </a>
                     </div>
                 </div>
             ))}

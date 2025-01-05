@@ -20,8 +20,8 @@ export default function MainContent() {
             <DemoGrid />
             <CompareCards />
             <SubscriptionHeading />
-            <FreeAccess />
             <SubscriptionPlan />
+            <FreeAccess />
             <Disclaimer />
             <a
                 href="https://www.youtube.com/"

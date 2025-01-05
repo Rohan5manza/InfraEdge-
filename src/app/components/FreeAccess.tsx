@@ -5,16 +5,20 @@ export default function FreeAccess() {
     return (
         <div className={styles.elements}>
 
-            <img src="/puzzle.png" alt="puzzle" className={styles.image} />
+            
             <div className={styles.content}>
-                <h2>Before 1st March 2025 :</h2>
-                <p>269/- per month subscription plan</p>
-                <ol>
-                    <li>Free access to server software</li>
-                    <li>education resources bundle</li>
+            <h2>First 5 customers to join us get all our services for FREE, FOREVER !</h2>
+            <h3><p>Buy Before 1st March 2025 for Bonuses !
+                Get our 269/- plan at only 199/- at a Discount 
+                </p></h3>
+                <ol> 
+                   
+                    <li>Free access to our server software. Play around and learn about Linux & Virtual Machines.</li>
+                    <li>Our monthly education resources bundle for FREE FOREVER</li>
+                    <li>Deploy and use 1 VM or VPS with any OS of your choice</li>
                 </ol>
                 <br />
-                <h4>You get these features along with the ones mentioned in the below subscription plan</h4>
+                
             </div>
         </div >
     )
