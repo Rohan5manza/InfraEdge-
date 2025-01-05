@@ -4,7 +4,7 @@ import styles from "../page.module.css";
 export default function InfraedgeFeatures() {
     return (
         <div className={styles.elements}>
-            <h1>What is InfraEdge?</h1>
+            
             <div className={styles.youtube}>
                 <iframe
                     src="https://www.youtube.com/embed/4yT1crRpw1c"

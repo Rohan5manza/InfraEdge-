@@ -27,10 +27,7 @@ export default function MainContent() {
                 href="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer" >
-                <SplineEmbed
-                    className={styles.spline1}
-                    sceneUrl="https://prod.spline.design/gohhZXPLZm-P4NNu/scene.splinecode"
-                />
+                
             </a>
         </main>
     );

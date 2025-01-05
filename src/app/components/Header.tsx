@@ -5,10 +5,10 @@ import styles from "../page.module.css";
 export default function Header() {
     return (
         <header className={styles.header}>
-            <div className={styles.logoSection}>
+            <div className="container mx-auto flex justify-between items-center flex-wrap">
                 <img src="/infraedge.png" alt="Logo" className={styles.logo} />
                 <span className={styles.brandName}>
-                    InfraEdge
+                    
                 </span>
             </div>
             <nav className={styles.navbar}>

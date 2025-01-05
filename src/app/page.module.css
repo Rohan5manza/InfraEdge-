@@ -20,6 +20,7 @@
 
 @media (prefers-color-scheme: dark) {
   .page {
+    
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
     --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
@@ -50,6 +51,29 @@
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: bold;
+}
+/* For Tablets (below 768px) */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;  /* Reduce font size for medium screens */
+    margin-bottom: 15px;
+  }
+}
+
+/* For Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2rem;  /* Further reduce font size for smaller screens */
+    margin-bottom: 10px;
+  }
+}
+
+/* For Extra Small Screens (like very narrow mobile screens) */
+@media (max-width: 320px) {
+  .heading {
+    font-size: 1.8rem;  /* Further decrease font size on very small screens */
+    margin-bottom: 8px;
+  }
 }
 
 .gridContainer {
@@ -83,7 +107,54 @@
   border-radius: 5px;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.2rem; /* Slightly smaller heading */
+    margin-bottom: 15px;
+  }
 
+  .gridContainer {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid for smaller items */
+    padding: 15px;
+  }
+
+  .gridItem {
+    padding: 12px; /* Less padding for smaller screens */
+  }
+
+  .gridTypetext {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .gridImage {
+    border-radius: 3px; /* Reduce border-radius for smaller screens */
+  }
+}
+
+/* Responsive Design for mobile screens (e.g., phones) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin-bottom: 10px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr; /* Stack the items in a single column */
+    padding: 10px;
+  }
+
+  .gridItem {
+    padding: 10px; /* Even smaller padding */
+  }
+
+  .gridTypetext {
+    font-size: 0.9rem; /* Smaller text for mobile */
+  }
+
+  .gridImage {
+    border-radius: 5px; /* Keep the border-radius consistent */
+  }
+}
 @keyframes cursor {
   50% {
     border-left: 1px solid #1a1a1a
@@ -131,11 +202,12 @@
 .compare {
   min-width: 100vw;
   display: flex;
-  align-items: space-between;
+  align-items: flex-start;
   justify-content: center;
   padding: 30px;
   gap: 30px;
   flex-direction: row;
+  flex-wrap:wrap;
 }
 
 .card1 {
@@ -288,6 +360,33 @@
   animation: cursor 0.6s step-start infinite;
 }
 
+@media (max-width: 480px) {
+  .compare {
+    padding: 10px;
+  }
+
+  .card1,
+  .card2 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .card1 h2,
+  .card2 h2 {
+    font-size: 1.2em; /* Even smaller heading */
+    margin-top: 15px;
+  }
+
+  .card1 ol,
+  .card2 ol {
+    font-size: 14px;
+  }
+
+  .card1 li,
+  .card2 li {
+    font-size: 12px; /* Reduce font size for very small screens */
+  }
+}
 .image img {
 
   min-height: 80px;
@@ -343,6 +442,23 @@
   flex-direction: row;
 }
 
+/* For Tablets (below 768px) */
+@media (max-width: 768px) {
+  .elements {
+    flex-direction: column;
+    font-size:1.2rem; /* Stack elements vertically on tablets */
+    padding: 20px 30px;
+  }
+}
+
+/* For Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+  .elements {
+    flex-direction: column; /* Stack elements vertically on mobile devices */
+    padding: 20px 20px;
+    font-size: 0.9rem; /* Slightly smaller font size for mobile */
+  }
+}
 .content {
   min-width: 70vw;
   background-color: none;
@@ -473,7 +589,7 @@ a.secondary {
 }
 
 
-/* Navbar Links */
+/* Default Navbar styles */
 .navbar {
   display: flex;
   align-items: center;
@@ -489,8 +605,33 @@ a.secondary {
 }
 
 .navbar a:hover {
-  color: #ffa32ac5;
-  /* Purple on hover */
+  color: #ffa32ac5; /* Purple on hover */
+}
+
+/* For Tablets (below 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar links vertically on tablets */
+    gap: 20px; /* Reduce the gap between the items */
+    padding-right: 0; /* Remove extra padding */
+  }
+
+  .navbar a {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+}
+
+/* For Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack the navbar links vertically on mobile */
+    gap: 15px; /* Further reduce the gap between items */
+    padding-right: 0; /* Remove extra padding */
+  }
+
+  .navbar a {
+    font-size: 12px; /* Further reduce font size for mobile */
+  }
 }
 
 /* Waitlist Button */
@@ -537,22 +678,57 @@ a.secondary {
 
 .brandsection {
   display: flex;
-
   align-items: center;
   gap: 25px;
+  padding: 10px; /* Add padding to make it more flexible */
 }
 
+/* Logo size */
 .brandsection .logo {
   height: 90px;
   width: auto;
 }
 
+/* Brand name size and styling */
 .brandsection .brandname {
   font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
+/* For Tablets (below 768px) */
+@media (max-width: 768px) {
+  .brandsection {
+    flex-direction: column; /* Stack the logo and brand name vertically on tablets */
+    align-items: center; /* Center align items */
+    gap: 15px; /* Reduce gap between logo and name */
+  }
+
+  .brandsection .logo {
+    height: 70px; /* Slightly smaller logo size on tablets */
+  }
+
+  .brandsection .brandname {
+    font-size: 20px; /* Reduce brand name size on tablets */
+  }
+}
+
+/* For Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+  .brandsection {
+    flex-direction: column; /* Stack the logo and brand name vertically on mobile */
+    gap: 10px; /* Further reduce gap between logo and name */
+  }
+
+  .brandsection .logo {
+    height: 50px; /* Even smaller logo size on mobile */
+  }
+
+  .brandsection .brandname {
+    font-size: 18px; /* Further reduce font size for mobile */
+  }
+}
+/* Default .linkssection for larger screens */
 .linkssection {
   display: flex;
   flex-direction: row;
@@ -568,7 +744,6 @@ a.secondary {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .linkssection .column h4 {
@@ -635,6 +810,79 @@ a.secondary {
   font-size: 24px;
   /* Icon size */
 }
+
+/* For Tablets (below 768px) */
+@media (max-width: 768px) {
+  .linkssection {
+    width: 80vw; /* Make the links section take up more width on tablets */
+    gap: 40px; /* Reduce gap between columns */
+  }
+
+  .column h4 {
+    font-size: 14px; /* Reduce font size for headers */
+  }
+
+  .column a {
+    font-size: 14px; /* Reduce font size for links */
+  }
+
+  .footerbottom {
+    flex-direction: column; /* Stack footer content vertically */
+    gap: 20px;
+  }
+
+  .socialicons {
+    gap: 30px; /* Reduce gap between social icons */
+    padding-right: 0;
+  }
+
+  .footerbottom .socialicons a {
+    font-size: 14px; /* Smaller icon text on tablets */
+  }
+
+  .footerbottom .social-icons svg {
+    font-size: 20px; /* Smaller icon size on tablets */
+  }
+}
+
+/* For Mobile Devices (below 480px) */
+@media (max-width: 480px) {
+  .linkssection {
+    width: 100vw; /* Make the links section take full width on mobile */
+    gap: 20px; /* Further reduce the gap */
+  }
+
+  .column {
+    flex: 1 1 100%; /* Make each column take full width */
+  }
+
+  .column h4 {
+    font-size: 12px; /* Further reduce font size for headers on mobile */
+  }
+
+  .column a {
+    font-size: 12px; /* Further reduce font size for links on mobile */
+  }
+
+  .footerbottom {
+    flex-direction: column; /* Stack footer content vertically */
+    gap: 10px;
+  }
+
+  .socialicons {
+    gap: 20px; /* Reduce gap between social icons */
+    padding-right: 0;
+  }
+
+  .footerbottom .socialicons a {
+    font-size: 12px; /* Smaller icon text on mobile */
+  }
+
+  .footerbottom .social-icons svg {
+    font-size: 18px; /* Smaller icon size on mobile */
+  }
+}
+
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
